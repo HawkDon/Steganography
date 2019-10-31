@@ -1,0 +1,31 @@
+31 / 10 - 15:12
+We have set a project up for the exercise and are about to search up on the problem and create solution
+
+We have decided to use Olivers computer so everyone can contribute with ideas and help each other out as much as possible.
+
+Our issue is to find a hidden message in a picture, and we know that it is a ASCII message we have to find and print out.
+
+
+31 / 10 - 16:00
+I am trying to convert the images pixels to bytes and operate on those. I used the following resource for inspiration
+https://stackoverflow.com/questions/3801275/how-to-convert-image-to-byte-array
+
+31 / 10 - 17:00
+I made a huge mistake and tried to convert the bytes into string binaries and later convert them back as bytes.
+this meant that the String we operated on such as "10011000" got converted over and gave wrong bytes of bits... woops
+
+31 / 10 - 18:00
+I decided to try and decode the message online with a decoder... Didn't seem to provide any message... this seems odd:
+https://futureboy.us/stegano/decinput.html
+Could be the resource though.
+Tried another one but it doesn't seem to provide me any help:
+https://manytools.org/hacker-tools/steganography-encode-text-into-image/
+
+31 / 10 - 19:00
+We decided to call if for a day. We created a list of bytes but some of them doesn't seem to be valid in the conversion. We are not entirely
+sure where to go from here. We might give it a shot later in the weekend.
+
+Other Resources
+3:45 https://github.com/aagarwal1012/Image-Steganography-Library-Android
+3:55 https://www.boiteaklou.fr/Steganography-Least-Significant-Bit.html#do-it-yourself
+4:19 https://stackoverflow.com/questions/50173028/how-to-get-binary-representation-of-int-in-kotlin
