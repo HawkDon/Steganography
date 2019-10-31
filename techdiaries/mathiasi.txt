@@ -1,3 +1,7 @@
 3:45 https://github.com/aagarwal1012/Image-Steganography-Library-Android
 3:55 https://www.boiteaklou.fr/Steganography-Least-Significant-Bit.html#do-it-yourself
 4:19 https://stackoverflow.com/questions/50173028/how-to-get-binary-representation-of-int-in-kotlin
+
+
+https://www.rapidtables.com/convert/number/decimal-to-binary.html
+http://www.unit-conversion.info/texttools/convert-text-to-binary/
