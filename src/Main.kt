@@ -15,10 +15,16 @@ fun main(args: Array<String>) {
     val height = picture.height
     val width = picture.width
 
-    val redNumbers = mutableListOf<Int>()
-    for (n in 0 until height) {
+    val redNumbers = mutableListOf<String>()
+    outerLoop@ for (n in 0 until height) {
         for (i in 0 until width) {
-            redNumbers.add(getRedColorAndLastBit(i, n, picture))
+            var color = getRedColorAndLastBit(i, n, picture)
+            if(color == 48) {
+                break@outerLoop;
+            }
+            println("Binary: ${Integer.toBinaryString(color)}" )
+            println("Last two: ${color shr 1 and 1}${color shr 0 and 1}" )
+            redNumbers.add("${color shr 1 and 1}${color shr 0 and 1}")
         }
     }
 
@@ -27,8 +33,7 @@ fun main(args: Array<String>) {
     var byte = ""
     val listOfBytes = arrayListOf<String>()
     for (n in redNumbers) {
-        println(n)
-        if(num == 8) {
+        if(num == 4) {
             listOfBytes.add(byte)
             num = 0
             byte = ""
@@ -37,28 +42,14 @@ fun main(args: Array<String>) {
         num++
     }
 
-    println(listOfBytes)
-
-/*
-    val arrays = mutableListOf<Byte>()
-    var num = 1
-    var bit = ""
-    for (red in redNumbers) {
-        bit += red.substring(red.length - 1)
-        num++
-        if(num == 10) {
-            arrays.add(bit.toByte())
-            num = 1
-            bit = ""
-        }
-        println(bit)
+    val sb = StringBuilder()
+    for (bit in listOfBytes) {
+        sb.append(Integer.parseInt(bit, 2).toChar())
     }
-    println(arrays)
-*/
+    println(sb.toString())
 }
 
 fun getRedColorAndLastBit(width: Int, height: Int, picture: BufferedImage): Int {
     val rgb = picture.getRGB(width,height)
-    val red = rgb.ushr(16) and 0xFF
-    return red shr 0 and 1
+    return rgb.ushr(16) and 0xFF
 }
