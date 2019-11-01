@@ -1,0 +1,11 @@
+15:44 working on how to get red values in RGB of the x = 0, and y = 0 coordinates.
+
+15:57 doing a for loop solution where we loop through every pixel in width first and then height in order to get the red values of the rgb
+
+16:06 our current solution prints all the red values in our picture
+
+16:08 we need to convert our values to bytes and then into bits
+
+16:18 found a solution to turn integer directly into binary using Integer.toBinaryString()
+
+16:38 current problem is understanding what the least significant bit is and how we are supposed to convert it to letters
